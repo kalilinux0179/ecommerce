@@ -7,6 +7,9 @@ import AllCategories from "./Pages/Admin/AllCategories";
 import AdminLogin from "./Pages/Admin/Login";
 import AdminRegister from "./Pages/Admin/Register";
 import Home from "./Pages/Customer/Home";
+import ProductReviews from "./Pages/Admin/ProductReviews";
+import CategoryList from "./Pages/Admin/Category/CategoryList";
+import NewCategory from "./Pages/Admin/Category/NewCategory";
 
 const App = () => {
   return (
@@ -17,8 +20,11 @@ const App = () => {
           <Route path="/admin" element={<Layout />}>
             <Route index element={<AllProducts />} />
             <Route path="/admin/allproducts" element={<AllProducts />} />
+            <Route path="/admin/categorylist" element={<CategoryList />} />
+            <Route path="/admin/addcategroy" element={<NewCategory />} />
             <Route path="/admin/categories" element={<AllCategories />} />
             <Route path="/admin/addproducts" element={<AddProducts />} />
+            <Route path="/admin/reviews" element={<ProductReviews />} />
           </Route>
           <Route path="/admin/login" element={<AdminLogin />} />
           <Route path="/admin/register" element={<AdminRegister />} />

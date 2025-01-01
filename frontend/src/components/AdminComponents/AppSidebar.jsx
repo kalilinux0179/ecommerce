@@ -1,10 +1,5 @@
 import * as React from "react";
-import {
-  Frame,
-  Map,
-  PieChart,
-  ShoppingBasket,
-} from "lucide-react";
+import { Frame, Layers, Map, PieChart, ShoppingBasket, ShoppingCart } from "lucide-react";
 import {
   Sidebar,
   SidebarContent,
@@ -28,9 +23,25 @@ const data = {
 
   navMain: [
     {
+      title: "Category",
+      url: "#",
+      icon: Layers,
+      isActive: true,
+      items: [
+        {
+          title: "All Products",
+          url: "/admin/categorylist",
+        },
+        {
+          title: "Add Products",
+          url: "/admin/addcategroy",
+        },
+      ],
+    },
+    {
       title: "Products",
       url: "#",
-      icon: ShoppingBasket,
+      icon: ShoppingCart,
       isActive: true,
       items: [
         {
@@ -38,16 +49,40 @@ const data = {
           url: "/admin/allproducts",
         },
         {
-          title: "Prouct Categories",
-          url: "/admin/categories",
+          title: "Add Products",
+          url: "/admin/addproducts",
         },
         {
-          title: "Add New Products",
-          url: "/admin/addproducts",
+          title: "Product Categories",
+          url: "/admin/categories",
+        },
+
+        {
+          title: "Product Reviews",
+          url: "/admin/reviews",
         },
       ],
     },
-    
+    {
+      title: "Orders",
+      url: "#",
+      icon: ShoppingBasket,
+      isActive: true,
+      items: [
+        {
+          title: "All Orders",
+          url: "/admin/#",
+        },
+        {
+          title: "Pending Orders",
+          url: "/admin/#",
+        },
+        {
+          title: "Order History",
+          url: "/admin/#",
+        },
+      ],
+    },
   ],
   projects: [
     {
@@ -69,7 +104,7 @@ const data = {
 };
 
 export function AppSidebar(props) {
-  const {user} = useSelector((state) => state.auth);
+  const { user } = useSelector((state) => state.auth);
   return (
     <Sidebar collapsible="icon" {...props}>
       <SidebarContent>
