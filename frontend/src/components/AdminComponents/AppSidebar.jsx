@@ -29,78 +29,62 @@ const data = {
       isActive: true,
       items: [
         {
-          title: "All Products",
+          title: "Category List",
           url: "/admin/categorylist",
         },
         {
-          title: "Add Products",
+          title: "Add Category",
           url: "/admin/addcategroy",
         },
       ],
     },
-    {
-      title: "Products",
-      url: "#",
-      icon: ShoppingCart,
-      isActive: true,
-      items: [
-        {
-          title: "All Products",
-          url: "/admin/allproducts",
-        },
-        {
-          title: "Add Products",
-          url: "/admin/addproducts",
-        },
-        {
-          title: "Product Categories",
-          url: "/admin/categories",
-        },
+    // {
+    //   title: "Products",
+    //   url: "#",
+    //   icon: ShoppingCart,
+    //   isActive: true,
+    //   items: [
+    //     {
+    //       title: "All Products",
+    //       url: "/admin/allproducts",
+    //     },
+    //     {
+    //       title: "Add Products",
+    //       url: "/admin/addproducts",
+    //     },
+    //     {
+    //       title: "Product Categories",
+    //       url: "/admin/categories",
+    //     },
 
-        {
-          title: "Product Reviews",
-          url: "/admin/reviews",
-        },
-      ],
-    },
-    {
-      title: "Orders",
-      url: "#",
-      icon: ShoppingBasket,
-      isActive: true,
-      items: [
-        {
-          title: "All Orders",
-          url: "/admin/#",
-        },
-        {
-          title: "Pending Orders",
-          url: "/admin/#",
-        },
-        {
-          title: "Order History",
-          url: "/admin/#",
-        },
-      ],
-    },
+    //     {
+    //       title: "Product Reviews",
+    //       url: "/admin/reviews",
+    //     },
+    //   ],
+    // },
+    // {
+    //   title: "Orders",
+    //   url: "#",
+    //   icon: ShoppingBasket,
+    //   isActive: true,
+    //   items: [
+    //     {
+    //       title: "All Orders",
+    //       url: "/admin/#",
+    //     },
+    //     {
+    //       title: "Pending Orders",
+    //       url: "/admin/#",
+    //     },
+    //     {
+    //       title: "Order History",
+    //       url: "/admin/#",
+    //     },
+    //   ],
+    // },
   ],
-  projects: [
-    {
-      name: "Design Engineering",
-      url: "#",
-      icon: Frame,
-    },
-    {
-      name: "Sales & Marketing",
-      url: "#",
-      icon: PieChart,
-    },
-    {
-      name: "Travel",
-      url: "#",
-      icon: Map,
-    },
-  ],
+
 };
 
 export function AppSidebar(props) {
@@ -109,7 +93,6 @@ export function AppSidebar(props) {
     <Sidebar collapsible="icon" {...props}>
       <SidebarContent>
         <NavMain items={data.navMain} />
-        <NavProjects projects={data.projects} />
       </SidebarContent>
       <SidebarFooter>
         {user ? (
