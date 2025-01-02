@@ -12,7 +12,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { LogOut, UserRoundPen } from "lucide-react";
 import axios from "axios";
-import { adminAuth } from "@/utils/constants";
+import { adminAuth, api } from "@/utils/constants";
 import { setUser } from "@/store/slice/authSlice";
 import { toast } from "sonner";
 
@@ -22,7 +22,7 @@ const Navbar = () => {
   const navigate = useNavigate();
   const logOutHandler = async () => {
     try {
-      const response = await axios.get(`${adminAuth}/admin/logout`, {
+      const response = await axios.get(`${api}/admin/logout`, {
         withCredentials: true,
       });
       if (response.data.success) {

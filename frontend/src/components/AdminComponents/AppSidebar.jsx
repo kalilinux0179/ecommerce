@@ -33,56 +33,56 @@ const data = {
           url: "/admin/categorylist",
         },
         {
-          title: "Add Category",
+          title: "New Category",
           url: "/admin/addcategroy",
         },
       ],
     },
-    // {
-    //   title: "Products",
-    //   url: "#",
-    //   icon: ShoppingCart,
-    //   isActive: true,
-    //   items: [
-    //     {
-    //       title: "All Products",
-    //       url: "/admin/allproducts",
-    //     },
-    //     {
-    //       title: "Add Products",
-    //       url: "/admin/addproducts",
-    //     },
-    //     {
-    //       title: "Product Categories",
-    //       url: "/admin/categories",
-    //     },
+    {
+      title: "Products",
+      url: "#",
+      icon: ShoppingCart,
+      isActive: true,
+      items: [
+        {
+          title: "All Products",
+          url: "/admin/allproducts",
+        },
+        {
+          title: "Add Products",
+          url: "/admin/addproducts",
+        },
+        {
+          title: "Product Categories",
+          url: "/admin/categories",
+        },
 
-    //     {
-    //       title: "Product Reviews",
-    //       url: "/admin/reviews",
-    //     },
-    //   ],
-    // },
-    // {
-    //   title: "Orders",
-    //   url: "#",
-    //   icon: ShoppingBasket,
-    //   isActive: true,
-    //   items: [
-    //     {
-    //       title: "All Orders",
-    //       url: "/admin/#",
-    //     },
-    //     {
-    //       title: "Pending Orders",
-    //       url: "/admin/#",
-    //     },
-    //     {
-    //       title: "Order History",
-    //       url: "/admin/#",
-    //     },
-    //   ],
-    // },
+        {
+          title: "Product Reviews",
+          url: "/admin/reviews",
+        },
+      ],
+    },
+    {
+      title: "Orders",
+      url: "#",
+      icon: ShoppingBasket,
+      isActive: true,
+      items: [
+        {
+          title: "All Orders",
+          url: "/admin/#",
+        },
+        {
+          title: "Pending Orders",
+          url: "/admin/#",
+        },
+        {
+          title: "Order History",
+          url: "/admin/#",
+        },
+      ],
+    },
   ],
 
 };

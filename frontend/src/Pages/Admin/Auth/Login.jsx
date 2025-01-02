@@ -5,7 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
-import { adminAuth } from "@/utils/constants";
+import { adminAuth, api } from "@/utils/constants";
 import { toast } from "sonner";
 import axios from "axios";
 import { useDispatch } from "react-redux";
@@ -20,7 +20,7 @@ const AdminLogin = () => {
     e.preventDefault();
     setLoading(true);
     try {
-      const response = await axios.post(`${adminAuth}/admin/login`, input, {
+      const response = await axios.post(`${api}/admin/login`, input, {
         headers: {
           "Content-Type": "application/json",
         },

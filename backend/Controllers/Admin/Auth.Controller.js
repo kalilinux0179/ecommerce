@@ -62,7 +62,7 @@ export const login = async (req, res) => {
             email: adminExists.email,
           };
           const tokenData = {
-            _id: adminExists._id,
+            userId: adminExists._id,
             username: adminExists.username,
           };
           const jwtToken = jwt.sign(tokenData, process.env.JWT_SECRET, {

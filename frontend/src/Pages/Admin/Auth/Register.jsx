@@ -6,7 +6,7 @@ import { Label } from "@/components/ui/label";
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import axios from "axios";
-import { adminAuth } from "@/utils/constants";
+import { adminAuth, api } from "@/utils/constants";
 import { toast } from "sonner";
 
 const AdminRegister = () => {
@@ -21,7 +21,7 @@ const AdminRegister = () => {
     e.preventDefault();
     try {
       setLoading(true);
-      const response = await axios.post(`${adminAuth}/admin/register`, input, {
+      const response = await axios.post(`${api}/admin/register`, input, {
         headers: {
           "Content-Type": "application/json",
         },

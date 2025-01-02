@@ -3,6 +3,7 @@ import connectDB from "./DataBase/index.js";
 import cookieParser from "cookie-parser";
 import dotenv from "dotenv";
 import adminAuthRoute from "./Routes/Admin/Auth.Route.js";
+import categoryRoute from "./Routes/Admin/Category.Route.js"
 import cors from "cors";
 const app = express();
 // defaul middleware
@@ -18,6 +19,7 @@ app.use(cors({
 
 // Routes
 app.use("/api/admin/", adminAuthRoute);
+app.use("/api/admin/", categoryRoute)
 const PORT = 4000;
 connectDB()
   .then(
