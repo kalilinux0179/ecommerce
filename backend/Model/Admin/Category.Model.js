@@ -4,7 +4,6 @@ const CategorySchema = Schema({
     categoryName: {
         type: String,
         required: true,
-        unique: true
     },
     imageUrl: {
         type: String,
@@ -22,11 +21,11 @@ const CategorySchema = Schema({
         type: Number,
         default: 1
     },
-    createdBy: [{
+    createdBy: {
         type: Schema.Types.ObjectId,
         ref: "AdminAuth",
         required: true,
-    }]
+    }
 
 }, { timestamps: true });
 

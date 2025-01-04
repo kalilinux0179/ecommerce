@@ -1,4 +1,4 @@
-import { AppSidebar } from "@/components/AdminComponents/appSidebar";
+import { AppSidebar } from "@/components/AdminComponents/Layout/AppSidebar";
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -52,7 +52,7 @@ const Layout = () => {
                 <ThemeModes />
               </div>
             </header>
-            <div className="p-4 pt-0">
+            <div className="p-4">
               <Outlet />
             </div>
           </SidebarInset>

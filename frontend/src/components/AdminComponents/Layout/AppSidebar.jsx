@@ -7,9 +7,8 @@ import {
   SidebarRail,
 } from "@/components/ui/sidebar";
 import { NavMain } from "./navMain";
-import { NavProjects } from "./NavProject";
 import { NavUser } from "./NavUser";
-import { Button } from "../ui/button";
+import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 

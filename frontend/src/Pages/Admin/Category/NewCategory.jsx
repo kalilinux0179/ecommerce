@@ -5,6 +5,7 @@ import { adminAuth, api } from "@/utils/constants";
 import axios from "axios";
 import { Loader2 } from "lucide-react";
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { toast } from "sonner";
 
 const NewCategory = () => {
@@ -15,6 +16,7 @@ const NewCategory = () => {
     file: null
   })
   const [loading, setLoading] = useState(false);
+  const navigate = useNavigate();
   const CategorySubmit = async (e) => {
     e.preventDefault();
     const formData = new FormData();
@@ -32,7 +34,14 @@ const NewCategory = () => {
       });
       if (response.data.success) {
         toast.success(response.data.message);
+        navigate("/admin/categorylist");
       }
+      setInput({
+        categoryName: "",
+        altImage: "",
+        totalStock: "",
+        file: null
+      })
     } catch (error) {
       toast.error(error.response.data.message);
     } finally {
@@ -43,7 +52,7 @@ const NewCategory = () => {
 
   return (
     <>
-      <div className="flex justify-center items-center h-full w-full min-h-[80vh]">
+      <div className="flex justify-center items-center h-full w-full min-h-[85vh]">
         <div className="bg-muted/50 rounded-xl px-8 py-8 w-full max-w-screen-sm flex flex-col gap-8">
           <h1 className="text-center text-4xl">Create New Category</h1>
           <form onSubmit={CategorySubmit} className=" pt-2">

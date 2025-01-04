@@ -87,3 +87,8 @@
 body {
   font-family: "Outfit", sans-serif;
 }
+
+*{
+  scrollbar-width: thin;
+  scroll-behavior: smooth;
+}
